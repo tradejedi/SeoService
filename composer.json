@@ -6,7 +6,7 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "TradeJedi\\": "src/"
+            "TradeJedi\\SeoService\\": "src/"
         }
     },
     "extra": {
