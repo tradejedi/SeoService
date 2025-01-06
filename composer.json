@@ -1,12 +1,12 @@
 {
-    "name": "tradejedi/seoservice",
+    "name": "tradejedi/seo-service",
     "description": "Seo Meta tags manager for Laravel (very simple and thin)",
     "type": "library",
     "keywords": ["laravel", "seo", "meta-tags"],
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "TradeJedi\\SeoService\\": "src/"
+            "TradeJedi\\": "src/"
         }
     },
     "extra": {
