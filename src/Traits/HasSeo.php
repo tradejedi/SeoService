@@ -1,8 +1,8 @@
 <?php
 
-namespace CoolmacJedi\SeoService\Traits;
+namespace TradeJedi\SeoService\Traits;
 
-use CoolmacJedi\SeoService\Services\SeoManager;
+use TradeJedi\SeoService\Services\SeoManager;
 use Illuminate\Support\Facades\App;
 
 trait HasSeo

@@ -1,11 +1,11 @@
 <?php
 
 
-namespace CoolmacJedi\SeoService\Contracts;
+namespace TradeJedi\SeoService\Contracts;
 
 use Illuminate\Database\Eloquent\Model;
-use CoolmacJedi\SeoService\Models\SeoTag;
-use CoolmacJedi\SeoService\Models\SeoTemplate;
+use TradeJedi\SeoService\Models\SeoTag;
+use TradeJedi\SeoService\Models\SeoTemplate;
 
 interface SeoResolverContract
 {

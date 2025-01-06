@@ -1,7 +1,7 @@
 <?php
 
 
-namespace CoolmacJedi\SeoService\View\Components;
+namespace TradeJedi\SeoService\View\Components;
 
 use Illuminate\View\Component;
 

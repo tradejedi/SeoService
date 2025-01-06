@@ -1,9 +1,9 @@
 <?php
 
-namespace CoolmacJedi\SeoService\Services;
+namespace TradeJedi\SeoService\Services;
 
-use CoolmacJedi\SeoService\Models\SeoTag;
-use CoolmacJedi\SeoService\Models\SeoTemplate;
+use TradeJedi\SeoService\Models\SeoTag;
+use TradeJedi\SeoService\Models\SeoTemplate;
 use Illuminate\Database\Eloquent\Model;
 
 class SeoManager

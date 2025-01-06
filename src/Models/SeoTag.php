@@ -1,6 +1,6 @@
 <?php
 
-namespace CoolmacJedi\SeoService\Models;
+namespace TradeJedi\SeoService\Models;
 
 use Illuminate\Database\Eloquent\Model;
 

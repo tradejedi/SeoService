@@ -1,13 +1,13 @@
 <?php
-namespace CoolmacJedi\SeoService;
+namespace TradeJedi\SeoService;
 
-use CoolmacJedi\SeoService\Contracts\SeoResolverContract;
-use CoolmacJedi\SeoService\SeoResolver;
-use CoolmacJedi\SeoService\Services\SeoManager;
+use TradeJedi\SeoService\Contracts\SeoResolverContract;
+use TradeJedi\SeoService\SeoResolver;
+use TradeJedi\SeoService\Services\SeoManager;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\Route;
-use CoolmacJedi\SeoService\Http\Controllers\SeoTagsController;
-use CoolmacJedi\SeoService\Http\Controllers\SeoTemplatesController;
+use TradeJedi\SeoService\Http\Controllers\SeoTagsController;
+use TradeJedi\SeoService\Http\Controllers\SeoTemplatesController;
 use Illuminate\Support\ServiceProvider;
 
 class SeoServiceProvider extends ServiceProvider{
@@ -46,7 +46,7 @@ class SeoServiceProvider extends ServiceProvider{
 
         // 2. Регистрируем пространство имён Blade-компонентов
         //    Например, "seoservice" → \LaravelSeo\SeoService\View\Components
-        Blade::componentNamespace('CoolmacJedi\SeoService\View\Components', 'seo-service');
+        Blade::componentNamespace('TradeJedi\SeoService\View\Components', 'seo-service');
 
         $this->loadRoutes();
     }

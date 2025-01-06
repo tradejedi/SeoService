@@ -1,11 +1,11 @@
 <?php
 
-namespace CoolmacJedi\SeoService\Http\Controllers;
+namespace TradeJedi\SeoService\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
-use CoolmacJedi\SeoService\Models\SeoTemplate;
-use CoolmacJedi\SeoService\Services\SeoManager;
+use TradeJedi\SeoService\Models\SeoTemplate;
+use TradeJedi\SeoService\Services\SeoManager;
 
 class SeoTemplatesController extends Controller
 {
