@@ -1,0 +1,26 @@
+{
+    "name": "tradejedi/seoservice",
+    "description": "Seo Meta tags manager for Laravel (very simple and thin)",
+    "type": "library",
+    "version": "1.0.1",
+    "keywords": ["laravel", "seo", "meta-tags"],
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "TradeJedi\\SeoService\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "TradeJedi\\SeoService\\SeoServiceProvider"
+            ]
+        }
+    },
+    "require": {
+        "php": "^8.0",
+        "laravel/framework": "^11.9"
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
