@@ -13,41 +13,37 @@ use Illuminate\Support\ServiceProvider;
 class SeoServiceProvider extends ServiceProvider{
     public function register()
     {
-        // Регистрируем конфиг
+        // 1. Сливаем конфиг
         $this->mergeConfigFrom(__DIR__ . '/../config/seo.php', 'seo');
 
+        // 2. Регистрируем сервис (Resolver) в контейнере
         $this->app->singleton(SeoResolverContract::class, function ($app) {
-            // Внутри резолвера автоматически внедрится SeoManager
             return new SeoResolver($app->make(SeoManager::class));
         });
-
-        $this->loadRoutes();
-        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'laravel-seo');
     }
 
     public function boot()
     {
-        // Публикация конфигурации
+        // 1. Публикация конфигурации
         $this->publishes([
             __DIR__ . '/../config/seo.php' => config_path('seo.php'),
         ], 'seo-config');
 
-        // Публикация миграций
+        // 2. Публикация (или автозагрузка) миграций
         $this->loadMigrationsFrom(__DIR__ . '/../database/migrations');
 
-        // Публикация вьюх
+        // 3. Публикация (или автозагрузка) вьюх
         $this->publishes([
             __DIR__ . '/../resources/views' => resource_path('views/vendor/seo-service'),
         ], 'seo-views');
 
-        // Регистрация наших роутов / вью
-        // 1. Сообщаем, где искать файлы вьюшек (если ещё не делали)
+        // 4. Загрузка вьюх с нужным namespace
         $this->loadViewsFrom(__DIR__ . '/../resources/views', 'seo-service');
 
-        // 2. Регистрируем пространство имён Blade-компонентов
-        //    Например, "seoservice" → \LaravelSeo\SeoService\View\Components
+        // 5. Регистрируем Blade-компоненты, если нужно
         Blade::componentNamespace('TradeJedi\SeoService\View\Components', 'seo-service');
 
+        // 6. Загружаем роуты
         $this->loadRoutes();
     }
 
