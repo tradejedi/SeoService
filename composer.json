@@ -2,7 +2,6 @@
     "name": "tradejedi/seoservice",
     "description": "Seo Meta tags manager for Laravel (very simple and thin)",
     "type": "library",
-    "version": "1.0.1",
     "keywords": ["laravel", "seo", "meta-tags"],
     "license": "MIT",
     "autoload": {
